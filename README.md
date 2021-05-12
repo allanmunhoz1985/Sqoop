@@ -166,3 +166,7 @@ insert into customers (customer_id,customer_fname, customer_lname,customer_city,
 
 select * from bv_customer_state;
 select * from customer_state_rtv;
+
+
+## Link Estudo:
+https://sqoop.apache.org/docs/1.4.6/SqoopUserGuide.html
