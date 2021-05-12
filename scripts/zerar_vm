@@ -1,0 +1,17 @@
+##########################################################################
+#script para "zerar" o processo na VW, rodar apenas se você quiser refazer
+########################################################################## 
+#apaga clientes no mysql que inserimos para testes, rodar no mysql
+delete from customers where customer_id > 12435;
+
+#apaga jobs do sqoop, rodar no shell do linux
+sqoop job --delete batchlayer
+sqoop job --delete speedlayer
+
+#apaga dados do hdfs, rodar no shell do linux
+sudo hdfs dfs -rm -r /user/cloudera/customersspeed/
+sudo hdfs dfs -rm -r /user/cloudera/
+
+#apaga banco de dados do hive, rodar no beeline
+drop database customers cascade;
+
